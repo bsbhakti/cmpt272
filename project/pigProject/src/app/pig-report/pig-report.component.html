@@ -1,0 +1,35 @@
+<div>
+  
+    <div class="map-container">
+      <app-pig-map
+      [coords] = "pigs"
+      > 
+
+      </app-pig-map>
+       
+    </div>
+  <table id="reports">
+    <tr>
+      <th>Location</th>
+      <th>Reported By</th>
+      <th>Time</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <tbody *ngFor="let pig of pigs">
+      
+      <tr>
+        <td>{{ pig.location}}</td>
+        <td>{{ pig.name }}</td>
+        <td>{{ pig.time}}</td>
+        <td>{{ pig.status}}</td>
+        <td (click) = "more(pig.key)"><a class="underline-anchor">More Info</a></td>
+        <td class="delete-icon" (click) = "delete(pig.key)">Delete</td>
+      </tr>
+    </tbody>
+  </table>
+ 
+ 
+</div>

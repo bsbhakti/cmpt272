@@ -1,0 +1,81 @@
+
+
+<div class="center-container">
+ 
+
+  <div class="w-full max-w-sm p-4 bg-white border rounded-lg shadow-md sm:p-6 dark:bg-gray-800 dark:border-gray-700">
+    <h1 class="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
+        More Info 
+    </h1>
+<!--    
+    <p *nfIf="pigReport.pigID!==null" class="text-sm font-normal text-gray-500 dark:text-gray-400">
+      </p> -->
+    <ul class="my-4 space-y-3">
+              <li>
+            <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                
+                <span class="flex-1 ml-3 whitespace-nowrap">PigID : {{pigReport.pigID}}</span>
+                
+            </a>
+        </li>
+              <li>
+            <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+          
+                <span class="flex-1 ml-3 whitespace-nowrap">Pig Breed : {{pigReport.breed}}</span>
+                
+            </a>
+        </li>
+        <li>
+            <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                <div>🦄</div>
+                <span class="flex-1 ml-3 whitespace-nowrap">Reporter Name : {{pigReport.name}}</span>
+                
+            </a>
+        </li>
+        <li>
+            <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                <div>📞</div>
+                <span class="flex-1 ml-3 whitespace-nowrap">Reporter Number : {{ pigReport.number }}</span>
+            </a>
+        </li>
+ 
+        <li>
+            <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+              <div>📍</div>  
+              <span class="flex-1 ml-3 whitespace-nowrap">Lattitude : {{ pigReport.Lalocation }}</span>
+            </a>
+        </li>
+        <li>
+            <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+              <div>📌</div>
+              <span class="flex-1 ml-3 whitespace-nowrap">Longitude : {{ pigReport.Lolocation }}</span>
+            </a>
+        </li>
+        <li>
+            <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+              <div>🌎</div>
+              <span class="flex-1 ml-3">Address : {{ pigReport.address }}</span>
+            </a>
+        </li>
+        <li>
+          <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+            <div>✨</div>
+            <span class="flex-1 ml-3">Status : {{ pigReport.status }}</span>
+          </a>
+      </li>
+      <li>
+        <a class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+          <div>📝</div>
+          <span class="flex-1 ml-3">Notes : {{ pigReport.notes }}</span>
+        </a>
+    </li>
+    </ul>
+    <div>
+        <a  class="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400">
+           
+            🐷 These reports help us a lot. Please consider adding one if you spot any of our pigs 🐖</a>
+    </div>
+</div>
+
+</div>
+

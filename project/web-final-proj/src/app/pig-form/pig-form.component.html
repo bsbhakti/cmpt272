@@ -1,0 +1,125 @@
+<h1 class="center-text">Add a Pig spotting</h1>
+<div class="form-container">
+  <form class="form-group" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <app-pig-map [lat]="lat" [lng]="lng" [formGroup]="form"></app-pig-map>
+
+    <!-- Horizontally scrollable tags -->
+
+    <div class="tags-container">
+      <div
+        class="scrollable-row"
+        *ngFor="let tag of previousLocations"
+        (click)="toggleTag(tag)"
+      >
+        <div class="tag-text pill-clikable-tags">{{ tag.address }}</div>
+      </div>
+    </div>
+
+    <fieldset style="border: 0px">
+      <label class="input-title" for="name"> Name</label>
+      <input
+        required
+        class="form-control"
+        name="name"
+        type="text"
+        placeholder="Your name"
+        formControlName="name"
+      />
+      <div
+        class="alert-box"
+        *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+      >
+        Name is required.
+      </div>
+      <div class="alert-box" *ngIf="name?.errors?.['minlength']">
+        Name must be at least 4 characters long.
+      </div>
+      <br />
+
+      <label class="input-title" for="number"> Phone number</label>
+      <input
+        name="number"
+        type="tel"
+        placeholder="Phone number"
+        formControlName="number"
+      />
+      <div
+        class="alert-box"
+        *ngIf="number?.invalid && (number?.dirty || number?.touched)"
+      >
+        Number is required.
+      </div>
+      <div class="alert-box" *ngIf="number?.errors?.['pattern']">
+        Number should be 10 digits long.
+      </div>
+
+      <br />
+
+      <label class="input-title" for="Lalocation">Lattitude</label
+      ><input
+        #lat
+        name="Lalocation"
+        type="text"
+        placeholder="Click on the map or tag"
+        formControlName="Lalocation"
+        class="greyed-disabled-input no-hover-effect"
+      /><br />
+      <label class="input-title" for="Lolocation">Longitude</label>
+      <input
+        #lng
+        name="Lolocation"
+        type="text"
+        placeholder="Click on the map or tag"
+        formControlName="Lolocation"
+        class="greyed-disabled-input no-hover-effect"
+      /><br />
+
+      <label class="input-title" for="notes">Notes</label>
+      <input
+        name="notes"
+        type="text"
+        placeholder="Notes"
+        formControlName="notes"
+      /><br />
+      <label class="input-title" for="number">Pig ID</label>
+      <input
+        name="pigID"
+        type="text"
+        placeholder="Pig ID"
+        formControlName="pigID"
+
+      /><br />
+      
+      <label class="input-title" for="breed">Breed</label>
+      <select name = "breed" formControlname = "breed" (change)="onSelected($event)" > 
+        <option  value = "pot-bellied">Pot-bellied </option>
+        <option  value = "unknown">Unknown</option>
+        </select>
+     <br/>
+      <div
+        class="alert-box"
+        *ngIf="pigID?.invalid && (pigID?.dirty || pigID?.touched)"
+      >
+        Name is required.
+      </div>
+      <!-- <label class="input-title" for = "name"> Status</label> <input name = "status" type = "text" placeholder = "Status" formControlName = "status"><br> -->
+      <input
+        [disabled]="!form.valid"
+        type="submit"
+        id="report-submit-btn"
+        class="submit-button"
+        *ngIf = "isLoading===false"
+      />
+      <!-- Please wait button-->
+      <input
+        [disabled]="!form.valid"
+        type="submit"
+        id="report-submit-btn"
+        class="submit-button"
+        *ngIf = "isLoading===true"
+        value="Please wait..."
+      />
+
+    </fieldset>
+  </form>
+</div>

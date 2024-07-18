@@ -1,0 +1,52 @@
+<div>
+  <div class="map-container">
+    <app-pig-map [coords]="pigs"> </app-pig-map>
+  </div>
+  <table id="reports">
+    <tr>
+      <th (click)="sortTable(0)">Reported By</th>
+      <th (click)="sortTable(1)">Address</th>
+      <th (click)="sortTable(2)">Time</th>
+      <th (click)="sortTable(3)">Status</th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <tbody *ngFor="let pig of pigs">
+      <tr>
+        <td>{{ pig.name }}</td>
+        <td>{{ pig.address }}</td>
+        <td>{{ pig.time }}</td>
+        <td>
+          <div class="flex flex-row gap-4">
+            <div>{{ pig.status }}</div>
+            <mat-icon
+              *ngIf="pig.status === 'Ready for pickup'"
+              (click)="openDialog(pig.key, 'update')"
+              >check_box_outline_blank</mat-icon
+            >
+
+            <mat-icon
+              *ngIf="pig.status === 'Retrieved'"
+              (click)="openDialog(pig.key, 'update')"
+              >check_box</mat-icon
+            >
+          </div>
+        </td>
+
+        <td (click)="more(pig.key)">
+          <a class="underline-anchor">More Info</a>
+        </td>
+        <td class="delete-icon">
+          <button
+            class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            type="button"
+            (click)="openDialog(pig.key, 'delete')"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

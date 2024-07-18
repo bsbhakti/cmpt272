@@ -1,0 +1,17 @@
+table {
+    margin: 1em;
+    width: 90%;
+}
+
+td {
+    padding-bottom: 1em;
+}
+
+select {
+    width:100%;
+}
+
+.align_cen{
+    text-align: center;
+}
+

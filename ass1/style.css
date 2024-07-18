@@ -1,0 +1,144 @@
+nav {
+  background-color: #37484f;
+  height: 100px;
+  margin-bottom: 1cm;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  margin-left: 10px;
+  align-self: center;
+}
+
+nav > img {
+  align-self: center;
+  margin-right: 10px;
+}
+
+.orange {
+  color: #d7752e;
+}
+
+.white {
+  color: white;
+}
+
+.flex-container1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  /* width:50%; */
+}
+.flex-container1 > section {
+  width: 50%;
+  text-align: left;
+  font-size: x-large;
+}
+
+.flex-container > section {
+  width: 50%;
+  text-align: left;
+  font-size: x-large;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  /* width:50%; */
+}
+
+a {
+  color: brown;
+  text-decoration: none;
+}
+
+.hide {
+  display: none;
+}
+
+.hover:hover + .hide {
+  display: block;
+  color: black;
+}
+@media screen and (max-width: 550px) {
+  .flex-container1 {
+    flex-direction: column;
+  }
+}
+.button {
+  background-color: darkorange;
+  opacity: 0;
+  font-size: larger;
+  color: white;
+  margin-top: 0.5cm;
+  font-family: sans-serif;
+  justify-content: flex-end;
+  border: none;
+
+  transition: opacity 1s;
+}
+.book-container {
+  padding-bottom: 2cm;
+  width: 23vw;
+}
+
+.book_container:hover > .caption > .button {
+  opacity: 1;
+}
+
+.book_container:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  box-sizing: border-box;
+  justify-content: space-around;
+  text-align: left;
+  padding: 0;
+  width: 100%;
+}
+
+.image {
+  width: 23vw;
+  margin: 0px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 770px) {
+  .book_container {
+    width: 50%;
+  }
+  /* .image-container {
+    width: 100%;
+    
+  } */
+  .image {
+    width: 46vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .book-container {
+    width: 100%;
+  }
+  .image-container {
+    width: 100%;
+  }
+  .image {
+    width: 100vw;
+  }
+}
+
+.caption {
+  background-color: white;
+  padding-top: 1cm;
+  padding-left: 10%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 2%;
+}

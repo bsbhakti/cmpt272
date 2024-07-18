@@ -1,0 +1,31 @@
+body {
+  background-color: lavender;
+}
+form {
+  background-color: yellow;
+  /* border: 5cm;
+    margin: 5cm; */
+  border-color: aqua;
+}
+
+.table1 {
+  width: 45%;
+  border: 1cm;
+  border-color: yellowgreen;
+  align-content: center;
+  
+}
+
+.t1 {
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  align-content: space-between;
+}
+
+section {
+  float: left;
+}
+
+.t2 {
+  width: 50%;
+}

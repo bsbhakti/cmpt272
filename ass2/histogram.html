@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <title>
+            Assignment 2
+        </title>
+        <link href = "histogram.css" rel = "stylesheet">
+        <script src="calculate.js"></script>
+        
+    </head>
+
+    <body onload="init()">
+        
+
+        <form action="#" method="post" style = "background-color: white;">
+            <fieldset>
+            <h1 style = "color: #D96846;": #D96846 ;"> Histogram Generator</h1>
+            <input type="file" id= "fileInput">
+            <pre id="fileContent"></pre>
+            <div class = "container">
+            <section class = section1 style = "background-color: #CDCBD6;width:45%;margin-right:1cm;" >
+            <table class = "table1" id = "table1">
+                <th style="color: #D96846;"> Lower bounds</th>
+                <tr>
+                    <td class ="t1"><label for="max">Max</label></td>
+                    
+                    <td class ="t1"> <input class="form-control" id="max" type="text" value="" name="max"></input></td>
+                </tr>
+                  <tr>
+                    <td class ="t1"><label for="A+">A+</label></td>
+                    <td class ="t1"><input class="form-control" id="A+" type="text" value="" name="A+"></input></td>
+                </tr>
+                  <tr>
+                    <td class ="t1"><label for="A">A</label></td>
+                    <td class ="t1"><input class="form-control" id="A" type="text" value="" name="A"></input></td>
+                </tr>
+
+                  <tr>
+                    <td class ="t1"><label for="A-">A-</label></td>
+                    <td class ="t1"><input class="form-control" id="A-" type="text" value="" name="A-"></input></td>
+                </tr>
+                  <tr>
+                    <td class ="t1"><label for="B+">B+</label></td>
+                    <td class ="t1"><input class="form-control" id="B+" type="text" value="" name="B+"></input></td>
+                </tr>
+                  <tr>
+                    <td class ="t1"><label for="B">B</label></td>
+                    <td class ="t1"><input class="form-control" id="B" type="text" value="" name="B"></input></td>
+                </tr>
+                  <tr>
+                    <td class ="t1"><label for="B-">B-</label></td>
+                    <td class ="t1"><input class="form-control" id="B-" type="text" value="" name="B-"></input></td>
+                </tr>
+                  <tr>
+                    <td class ="t1"><label for="C+">C+</label></td>
+                    <td class ="t1"><input class="form-control" id="C+" type="text" value="" name="C+"></input></td>
+                </tr>
+                  <tr>
+                    <td class ="t1"><label for="C">C</label></td>
+                    <td class ="t1"><input class="form-control" id="C" type="text" value="" name="C"></input></td>
+                </tr>
+                  <tr>
+                    <td class ="t1"><label for="C-">C-</label></td>
+                    <td class ="t1"><input class="form-control" id="C-" type="text" value="" name="C-"></input></td>
+                </tr>
+                  <tr>
+                    <td class ="t1"><label for="D">D</label></td>
+                    <td class ="t1"><input class="form-control" id="D" type="text" value="" name="D"></input></td>
+                </tr>
+                  <tr>
+                    <td class ="t1"><label for="F">F</label></td>
+                    <td class ="t1"><input class="form-control" id="F" type="text" value="" name="F"></input></td>
+                </tr>
+            
+            </table>
+            </section>
+            <section  style = "background-color: #CDCBD6; width:50%; margin-bottom: 1cm;">
+                <table id = "table2">
+                    <th style="color: #D96846;">Histogram</th>
+        
+                  <tr>
+                    <td ><label for="A+">A+</label></td>
+                    
+                    <td id = "max2">   </td>
+                </tr>
+                  <tr>
+                    <td><label for="A">A</label></td>
+                    <td id = "A2"></td>
+                </tr>
+
+                  <tr>
+                    <td><label for="A-2">A-</label></td>
+                    <td id = "A-2"></td>
+                </tr>
+                  <tr>
+                    <td><label for="B+2">B+</label></td>
+                    <td id = "B+2"></td>
+                </tr>
+                  <tr>
+                    <td><label for="B2">B</label></td>
+                    <td id = "B2"></td>
+                </tr>
+                  <tr>
+                    <td><label for="B-2">B-</label></td>
+                    <td id = "B-2"></td>
+                </tr>
+                  <tr>
+                    <td><label for="C+2">C+</label></td>
+                    <td id = "C+2"></td>
+                </tr>
+                  <tr>
+                    <td><label for="C2">C</label></td>
+                    <td id = "C2"></td>
+                </tr>
+                  <tr>
+                    <td><label for="C-2">C-</label></td>
+                    <td id = "C-2"></td>
+                </tr>
+                  <tr>
+                    <td><label for="D2">D</label></td>
+                    <td id = "D2"></td>
+                </tr>
+                  <tr>
+                    <td><label for="F2">F</label></td>
+                    <td id = "F2"></td>
+                </tr> 
+                </table>
+                </div>
+            </section>
+            <section  style = "background-color: #CDCBD6; width:50%">
+                <table>
+                    <th style="color: #D96846;">Stats</th>
+                    <tr>
+                        <td class = "t2">Highest</td>
+                        <td id ="highest"></td>
+                    </tr>
+                    <tr>
+                        <td class = "t2">Lowest</td>
+                       <td id ="lowest"></td>
+
+                    </tr>
+                    <tr>
+                        <td class = "t2" >Mean</td>
+                        <td id ="mean"></td>
+                    </tr>
+                    <tr>
+                        <td class = "t2">Median</td>
+                        <td id ="median"></td>
+                    </tr>
+                </table>
+            </section>
+            
+            </fieldset>
+            </form>
+            
+    </body>
+</html>

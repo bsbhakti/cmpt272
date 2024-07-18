@@ -1,0 +1,93 @@
+/* class */
+
+/* .blue {
+    color:red;
+    background-color: #45A3E5;
+} */
+
+[title="smiling baby"] {
+    border: 1px solid black;
+    border-color: red green blue black;
+}
+
+p::first-line {
+    font-size: 2em;
+}
+
+/* p:nth-child(2){
+    color:red;
+} */
+
+aside #mylink {
+    font-size: 2em;
+}
+
+.hoverable:hover aside{
+    border: 1px dotted red;
+}
+
+/* float */
+h1~p{
+    color:green;
+    background-color: #45A3E5;
+    width: 25vw;
+    /* height: 50px; */
+    overflow: auto;
+    border: 1px solid black;
+    margin: 50px 20px 50px 20px;
+    float:left;
+}
+aside {
+    clear: left;
+}
+
+/* position */
+
+img {
+    width:150px;
+    transition: width 1s;
+    position: relative;
+    top: 100px;
+    left: 50px;
+}
+
+/* sectioning */
+section#flex{
+    padding: 20px 0px 20px 0px;
+    display:flex;
+    flex-wrap: wrap;
+    text-align:center;
+}
+
+.one, .two, .three, .four {
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: aliceblue;
+    flex: 33%;
+}
+
+/* table */
+
+table {
+    margin: 50px 0px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+tr:nth-child(2n){
+    background-color: aliceblue;
+}
+th, td {
+    border: 1px solid black;
+}
+
+/* transitions */
+img:hover {
+    width:200px;
+}
+
+/* tablet */
+@media only screen and (min-width:481px) and (max-width: 780px) {
+    p {
+        font-size: x-large;
+    }
+}

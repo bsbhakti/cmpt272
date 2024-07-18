@@ -1,0 +1,19 @@
+<h1> Pig form component</h1>
+<form class = "form-group"
+    [formGroup] = "form"
+    (ngSubmit) = "onSubmit(form.value)"
+    >
+    <app-pig-map [lat]="lat" [lng]="lng"></app-pig-map>
+    <fieldset>
+       <label for = "name"> Name</label> <input required class = "form-control" name = "name" type = "text" placeholder = "NAME" formControlName = "name"><br>
+
+       <label for = "number"> Phone number</label> <input name = "number" type = "number" placeholder = "NUMBER" formControlName = "number"><br>
+       <label for = "Lalocation"> Latitude Location</label> <input #lat name = "Lalocation" type = "number" placeholder = "Latitude location" formControlName = "Lalocation"><br>
+        <label for = "Lolocation"> Latitude Location</label> <input #lng name = "Lolocation" type = "number" placeholder = "Lolocation location" formControlName = "Lolocation"><br>
+
+       <label for = "notes"> Notes</label> <input name = "notes" type = "text" placeholder = "notes" formControlName = "notes"><br>
+       <label for = "name"> Time</label> <input name = "time" type = "time" placeholder = "time" formControlName = "time"><br>
+       <label for = "name"> Status</label> <input name = "status" type = "text" placeholder = "status" formControlName = "status"><br>
+       <button > Save</button>
+    </fieldset>
+</form>
